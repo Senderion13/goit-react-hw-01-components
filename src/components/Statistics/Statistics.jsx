@@ -1,4 +1,5 @@
 import css from "./Statistics.module.css";
+import PropTypes from "prop-types";
 let Statistics = ({title, stats}) => {
     return(
 <section className={css.statistics}>
@@ -33,5 +34,13 @@ function getRandomHexColor() {
       .toString(16)
       .padStart(6, 0)}`;
   }
+
+Statistics.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string,
+    percentage: PropTypes.number
+  }))
+}
 
 export default Statistics;

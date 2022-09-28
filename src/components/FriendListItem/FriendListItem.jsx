@@ -1,6 +1,7 @@
 import css from "./FriendListItem.module.css";
+import PropTypes from "prop-types";
 
-let FriendListItem = ({avatar, name, isOnline, id}) => {
+const FriendListItem = ({avatar, name, isOnline, id}) => {
     return(
     <li className={css.item} key={id + "item"}>
         <span className={css.status + " " + (isOnline ? css.online : css.offline)}></span>
@@ -8,6 +9,15 @@ let FriendListItem = ({avatar, name, isOnline, id}) => {
         <p className={css.name}>{name}</p>
     </li>
     );
+}
+
+FriendListItem.propTypes = {
+    items: PropTypes.shape({
+        avatar: PropTypes.string,
+        name: PropTypes.string,
+        isOnline: PropTypes.bool,
+        id: PropTypes.number.isRequired
+    })
 }
 
 export default FriendListItem;
