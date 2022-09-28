@@ -3,39 +3,37 @@
     text-align: center;
     margin: 0 auto;
     box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.4);
+    margin-bottom: 50px;
 }
 
-.statistics .title {
+.title {
     color: gray;
     font-weight: 500;
     padding: 30px 0;
     margin: 0;
 }
 
-.stat-list {
+.statList {
     list-style-type: none;
     display: flex;
     padding: 0;
     margin: 0;
 }
 
-.stat-list li {
+.item {
+    display: flex;
+    flex-direction: column;
     width: 80px;
     padding-top: 10px;
     padding-bottom: 10px;
     color: white;
 }
 
-.stat-list .item {
-    display: flex;
-    flex-direction: column;
-}
-
-.stat-list .item .label {
+.label {
     margin-bottom: 10px;
     font-size: 14px;
 }
 
-.stat-list .item .percentage {
+.percentage {
     font-size: 26px;
 }
